@@ -2,14 +2,14 @@ import React, { useState, useEffect } from "react";
 import PostagemApi from "../api/PostagemApi";
 
 function Postagens() {
-  const [postagemLista, setPostagens] = useState(undefined);
+  const [postagemLista, setPostagemLista] = useState(undefined);
 
   useEffect(() => {
     const postagemApi = new PostagemApi();
 
     var promise = postagemApi.getAll();
     promise.then((_postagens) => {
-      setPostagens(_postagens);
+      setPostagemLista(_postagens);
     });
     return () => {};
   }, []);

@@ -15,3 +15,5 @@ class PostagemApi {
     return promise;
   }
 }
+
+export default PostagemApi;
