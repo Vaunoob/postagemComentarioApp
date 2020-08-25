@@ -1,5 +1,6 @@
 import React from "react";
 import { render } from "@testing-library/react";
+import Postagens from "./components/Postagens";
 
 function App() {
   return (
@@ -29,6 +30,9 @@ function App() {
           </ul>
         </div>
       </nav>
+      <div className="container">
+        <Postagens />
+      </div>
     </>
   );
 }
