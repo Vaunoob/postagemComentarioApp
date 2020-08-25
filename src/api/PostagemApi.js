@@ -4,11 +4,11 @@ class PostagemApi {
       resolve([
         {
           titulo: "Bayern Campeão",
-          texto: "O Bayer foi campeão, o pai ta off",
+          texto: "O Bayer foi campeão",
         },
         {
-          titulo: "Paris Saint-German vice",
-          texto: "O Neymar não jogou nada",
+          titulo: "Paris Saint-Germain vice",
+          texto: "O pai ta off",
         },
       ]);
     });
