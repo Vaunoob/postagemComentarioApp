@@ -1,5 +1,5 @@
 class PostagemApi {
-  postagens = [
+  static postagens = [
     {
       id: 1,
       titulo: "Bayern Campeão",
@@ -21,11 +21,12 @@ class PostagemApi {
     },
   ];
 
-  getAll() {
-    let promise = new Promise((resolve, reject) => {
-      resolve(this.postagens);
-    });
-    return promise;
+  static getAll() {
+    return this.postagens;
+  }
+
+  static add(postagem) {
+    this.postagens.push(postagem);
   }
 }
 
