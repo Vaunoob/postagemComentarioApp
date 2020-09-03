@@ -1,7 +1,8 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import PostagemApi from "../api/PostagemApi";
+import { useHistory } from "react-router-dom";
 
-function Postagem(history) {
+function Postagem() {
   const [postagem, setPostagem] = useState({
     id: 0,
     titulo: "",
@@ -11,13 +12,12 @@ function Postagem(history) {
     comentarios: undefined,
   });
 
-  useEffect(() => {});
+  const history = useHistory();
 
   function submitForm(event) {
     event.preventDefault();
-    debugger;
     PostagemApi.add(postagem);
-    /*history.push("/");*/
+    history.push("/postagens");
   }
 
   function postagemHandler(event) {

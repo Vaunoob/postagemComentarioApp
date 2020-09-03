@@ -1,12 +1,13 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 
 function Cabecalho() {
   return (
     <>
       <nav className="navbar navbar-expand-lg navbar-light bg-light">
-        <a className="navbar-brand" href="/">
+        <NavLink className="navbar-brand" to="/">
           Home
-        </a>
+        </NavLink>
         <button
           className="navbar-toggler"
           type="button"
