@@ -7,13 +7,6 @@ function Postagens() {
   const [postagemLista, setPostagemLista] = useState(undefined);
 
   useEffect(() => {
-    /*const postagemApi = new PostagemApi();
-
-    var promise = postagemApi.getAll();
-    promise.then((_postagens) => {
-      setPostagemLista(_postagens);
-    });*/
-
     setPostagemLista(PostagemApi.getAll());
     return () => {};
   }, []);
@@ -29,7 +22,7 @@ function Postagens() {
                 <p>{p.texto}</p>
               </blockquote>
 
-              {/*postagemLista.Comentarios && */ <Comentarios />}
+              {postagemLista.Comentarios && <Comentarios />}
               <NovoComentario />
             </div>
           </div>
