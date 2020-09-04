@@ -1,10 +1,10 @@
 import React from "react";
 
-function Comentarios() {
+function Comentarios({ texto }) {
   return (
     <>
       <div className="card">
-        <div className="card-body">This is some text within a card body.</div>
+        <div className="card-body">{texto}</div>
       </div>
     </>
   );

@@ -26,6 +26,8 @@ class PostagemApi {
   }
 
   static add(postagem) {
+    let id = Math.round(+new Date() * Math.random());
+    postagem.id = id;
     this.postagens.push(postagem);
   }
 }

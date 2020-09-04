@@ -21,8 +21,10 @@ function Postagens() {
               <blockquote className="blockquote mb-0">
                 <p>{p.texto}</p>
               </blockquote>
-
-              {postagemLista.Comentarios && <Comentarios />}
+              {p.comentarios &&
+                p.comentarios.map((q, index) => (
+                  <Comentarios key={index} texto={q} />
+                ))}
               <NovoComentario />
             </div>
           </div>
