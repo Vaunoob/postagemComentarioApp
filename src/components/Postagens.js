@@ -11,6 +11,10 @@ function Postagens() {
     return () => {};
   }, []);
 
+  function novoComentario(comentarios, comentario) {
+    comentarios.push(comentario);
+  }
+
   return (
     <>
       {postagemLista &&
@@ -25,7 +29,10 @@ function Postagens() {
                 p.comentarios.map((q, index) => (
                   <Comentarios key={index} texto={q} />
                 ))}
-              <NovoComentario />
+              <NovoComentario
+                comentarios={p.comentarios}
+                funcao={novoComentario}
+              />
             </div>
           </div>
         ))}

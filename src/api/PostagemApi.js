@@ -17,7 +17,7 @@ class PostagemApi {
       texto: "O pai ta off",
       like: 0,
       dislike: 0,
-      comentarios: undefined,
+      comentarios: [],
     },
   ];
 
