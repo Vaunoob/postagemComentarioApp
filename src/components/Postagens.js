@@ -5,6 +5,8 @@ import NovoComentario from "./NovoComentario";
 
 function Postagens() {
   const [postagemLista, setPostagemLista] = useState(undefined);
+  /*const [like, setLike] = useState(0);
+  const [dislike, setDislike] = useState(0);*/
 
   useEffect(() => {
     setPostagemLista(PostagemApi.getAll());
@@ -34,6 +36,22 @@ function Postagens() {
                 funcao={novoComentario}
               />
             </div>
+            {/*<div display="flex">
+              <label htmlFor="like">Like</label>
+              <input
+                type="number"
+                name="like"
+                value={p.like}
+                onChange={likeHandler}
+              />
+              <label htmlFor="like">Dislike</label>
+              <input
+                type="number"
+                name="dislike"
+                value={p.dislike}
+                onChange={dislikeHandler}
+              />
+                </div>*/}
           </div>
         ))}
     </>

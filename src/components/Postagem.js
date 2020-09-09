@@ -9,7 +9,7 @@ function Postagem() {
     texto: "",
     like: 0,
     dislike: 0,
-    comentarios: undefined,
+    comentarios: [],
   });
 
   const history = useHistory();
